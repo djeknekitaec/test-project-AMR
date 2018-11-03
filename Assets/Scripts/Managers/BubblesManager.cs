@@ -30,8 +30,8 @@ public class BubblesManager : MonoBehaviour
     public readonly float minSize = 200;
     public readonly float maxSize = 500;
 
-    public readonly float minSpeed = 0.3f;
-    public readonly float maxSpeed = 1f;
+    public readonly float minSpeed = 20f;
+    public readonly float maxSpeed = 75f;
 
     float delay = 0.6f;
 
@@ -70,7 +70,7 @@ public class BubblesManager : MonoBehaviour
                     }
                     else
                     {
-                        bubbles[i].transform.position += Vector3.down * bubbles[i].speed;
+                        bubbles[i].transform.position += Vector3.down * bubbles[i].speed * Time.deltaTime;
                     }
                 }
             }
