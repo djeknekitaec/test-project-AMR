@@ -116,7 +116,7 @@ public class BubblesManager : MonoBehaviour
         else
         {
             float size = Random.Range(minSize, maxSize);
-            bubble.SetupBubble(size, Color.blue, 0.6f, (int)(maxSize - size + minSize), audioClip);
+            bubble.SetupBubble(size, Color.blue, minSpeed, (int)(maxSize - size + minSize), audioClip);
         }
 
         bubbles.Add(bubble);
@@ -154,7 +154,7 @@ public class BubblesManager : MonoBehaviour
         BubbleSettings b = new BubbleSettings();
         b.size = minSize;
         b.color = Color.white;
-        b.speed = 0.6f;
+        b.speed = minSpeed;
         bubbleSettings.Add(b);
     }
 
